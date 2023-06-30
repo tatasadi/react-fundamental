@@ -1,4 +1,6 @@
+import Link from "next/link";
 import "./globals.css";
+import { HomeIcon } from "@heroicons/react/24/solid";
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +14,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="bg-gray-800 text-gray-100 p-5 flex items-baseline justify-between">
+          <h1>React Tutorials</h1>
+          <Link href="/">
+            <HomeIcon className="h-6 w-6" />
+          </Link>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
