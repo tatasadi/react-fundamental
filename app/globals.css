@@ -21,7 +21,7 @@
 }
 
 .card {
-  @apply text-2xl p-2 m-2 bg-gray-300 flex justify-center w-40 rounded-md hover:bg-gray-200 hover:cursor-pointer;
+  @apply text-2xl p-2 flex justify-center w-40 rounded-md cursor-pointer bg-gradient-to-br from-amber-200 to-amber-400 hover:from-amber-300 hover:to-amber-500;
 }
 
 .button {

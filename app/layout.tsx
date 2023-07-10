@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="bg-gray-800 text-gray-100 p-5 flex items-baseline justify-between">
+        <header className="bg-purple-600 text-white p-5 flex items-baseline justify-between">
           <h1>React Tutorials</h1>
           <Link href="/">
             <HomeIcon className="h-6 w-6" />
