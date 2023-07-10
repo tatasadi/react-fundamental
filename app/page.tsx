@@ -9,6 +9,9 @@ export default function Home() {
       <div className="card">
         <Link href="/forms">Forms</Link>
       </div>
+      <div className="card">
+        <Link href="/hooks">Hooks</Link>
+      </div>
     </main>
   );
 }
