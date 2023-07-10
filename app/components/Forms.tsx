@@ -25,11 +25,13 @@ export function FormsV1() {
 
 // Using refs
 export function FormsV2() {
-  const firstnameRef = useRef(null);
+  const firstnameRef = useRef<HTMLInputElement>(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Firstname is ${firstnameRef.current.value}`);
+    if (firstnameRef.current) {
+      alert(`Firstname is ${firstnameRef.current.value}`);
+    }
   }
 
   return (
@@ -50,7 +52,7 @@ export function FormsV2() {
 
 // Validation
 export function FormsV3() {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   function handleChange(event) {
     const { value } = event.target;
