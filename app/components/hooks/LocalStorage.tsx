@@ -6,9 +6,11 @@ function useLocalStorageState(
   { serialize = JSON.stringify, deserialize = JSON.parse } = {}
 ) {
   const [state, setState] = useState(() => {
-    const valueInLocalStorage = window.localStorage.getItem(key);
-    if (valueInLocalStorage) {
-      return deserialize(valueInLocalStorage);
+    if (typeof window !== "undefined") {
+      const valueInLocalStorage = window.localStorage.getItem(key);
+      if (valueInLocalStorage) {
+        return deserialize(valueInLocalStorage);
+      }
     }
     return typeof defaultValue === "function" ? defaultValue() : defaultValue;
   });
